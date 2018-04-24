@@ -1,14 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'ruby:2.4'
-    }
-  }
+  agent none
   stages {
     stage('Build') {
       agent {
-        dockerfile {
-          additionalBuildArgs "--pull"
+        docker {
+          image 'ruby:2.4'
         }
       }
       steps {
