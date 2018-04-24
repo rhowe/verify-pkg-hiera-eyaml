@@ -19,7 +19,7 @@ pushd output
 for GEM in ../vendor/cache/*.gem; do
   fpm -s gem -t deb \
     --prefix /opt/puppetlabs/puppet/lib/ruby/gems/2.4.0 \
-    --iteration "${REVISION}~trusty1" \
+    --iteration "${REVISION}~verify-puppet-ruby2.4.0" \
     --architecture all \
     --maintainer "ida-operations@digital.cabinet-office.gov.uk" \
     "$GEM"
