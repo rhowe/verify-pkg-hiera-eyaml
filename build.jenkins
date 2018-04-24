@@ -12,7 +12,7 @@ pipeline {
         }
       }
       steps {
-        ./build.sh "$BUILD_NUMBER"
+        sh "./build.sh ${env.BUILD_NUMBER}"
       }
     }
   }
