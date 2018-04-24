@@ -9,6 +9,9 @@ REVISION=${1:-1}
 rm -rf output
 mkdir -p output
 
+# TODO: Pin this with a separate bundler
+gem install fpm
+
 bundle package
 
 pushd output
